@@ -1,3 +1,19 @@
-.title {
+/* ⬇class選擇器 */
+.title { 
     color:red;
+}
+.blueli{
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+}
+#red{
+    color: red;
+}
+/* 元素選擇器 */
+p{ 
+    /* 大括號內為聲明區塊，一個樣式key對應一個樣式value，key與value之間用:隔開，以;結尾 */
+    color: brown;
+    font-size: large;
+    font-weight: bold;
 }

@@ -5,11 +5,20 @@
     <meta name="keywords" content="Trainge,練習,HTML5,CSS">
     <meta name="description" content="這是我拿來練習網站用的網站 繞口令阿？">
     <title>Sam Tien</title>
+    <!-- 內部樣式表，只能生效在當下網頁 -->
+    <style>
+        li{ color: blue; font-size: 14px; }
+    </style>
+    <!-- 
+        - link標籤 連結外部樣式表，開發時 最推薦使用此種方式 
+        - 使用外部樣式表，可以最大利用瀏覽器的暫存機制，加快網頁加載速度
+            例如：載入首頁時，需要載入index.css的樣式表，如果切換到B網頁，也引用index.css，此時index.css會在瀏覽器暫存內，就不需要重新再加載一次。
+    -->
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <link href="css/index.css" rel="stylesheet" type="text/css">
     <h1 class="title">Hello Wy Web This is H1</h1>
-    <img src="./img/1.jpg" width="800" height="800">
+    <img src="../img/1.jpg" width="800" height="800">
     <img src="http://gamewikia.com/uploads/2018/12/21/1.1-4a1edb57a525ed2ed8a64d339d567771.jpg">
     <br>
     <a href="#bottom">去底部</a>
@@ -19,17 +28,19 @@
     <blockquote><p>這是一個段落 含blockquote 哭啊</p></blockquote>
     <div>最多的東西</div>
 
+    <!-- id 肯定是唯一值 一個網頁內千萬不能有重複的id -->
     <h2 id="listHead">這是一個列表</h2>
 
     <ol>
-        <li>結構</li>
-        <li>表現</li>
-        <li>行為</li>
+        <!-- 內部樣式，不建議使用 -->
+        <li style="color: blueviolet; font-size: 30px;">結構</li>
+        <li style="color: blue; font-size: small;">表現</li>
+        <li style="color: cyan; font-size: 22px">行為</li>
     </ol>
     <ul>
-        <li>結構</li>
-        <li>表現</li>
-        <li>行為</li>
+        <li id="red">結構，我是li，我的id是"red"</li>
+        <li class="blueli">表現，class是blueli</li>
+        <li class="blueli">行為，class也是blueli</li>
     </ul>
     <dl>
         <dt>結構</dt>
@@ -41,6 +52,9 @@
         <ul>
             <li>這是小小標</li>
             <li>這是小小標2</li>
+            <ul>
+                <li>這是第三層級的小標</li>
+            </ul>
         </ul>
     </ul>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem aut veniam, voluptate, voluptatum consequatur, enim doloribus laborum suscipit aliquid esse cupiditate! Alias accusantium nemo expedita blanditiis voluptates. Dignissimos, vero hic?</p>
